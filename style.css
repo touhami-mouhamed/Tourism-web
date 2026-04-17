@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root {
+    --ratio: 1.25;
+    --text-c: #fff;
+    --contrast-text: #ffffffbc;
+    --bg-c: #000;
+    --main-c: #ffa343;
+    --text-size-xs: 0.64rem;
+    --text-size-sm: 0.8rem;
+    --text-size-md: 1rem;
+    --text-size-lg: 1.25rem;
+    --text-size-xl: 1.56rem;
+    --text-size-2xl: 1.95rem;
+    --text-size-3xl: 2.44rem;
+    --text-size-4xl: 3.05rem;
+    --text-size-5xl: 3.81rem;
+    --h1-space: calc(var(--ratio)*var(--text-size-4xl));
+    --p-space: calc(var(--ratio)*var(--text-size-lg));
+    --XXS-gap: 0.5rem;
+    --XS-gap: 0.75rem;
+    --S-gap: 1rem;
+    --M-gap: 1.25rem;
+    --L-gap: 1.5rem;
+    --XL-gap: 2rem;
+
+}
+
+/*
+- header to paragraph use use large gap
+-a bit small header to paragraph use medium gap
+- paragraph to paragraph use base line gap 1rem or small gap 0.75 rem
+*/
+h1 {
+    font-size: var(--text-size-4xl);
+    line-height: var(--h1-space);
+    margin-bottom: var(--XL-gap);
+
+}
+
+p {
+    font-size: var(--text-size-md);
+    line-height: var(--p-space);
+    margin-bottom: var(--XS-gap);
+}
+
+button {
+    padding: var(--XXS-gap);
+}
+
+body {
+    background-color: var(--bg-c);
+    color: var(--text-c);
+}
+
+.nav-bar {
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--M-gap) var(--L-gap);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+header.stick {
+    backdrop-filter: blur(8px);
+}
+
+.left-nav h1 {
+    margin: 0;
+    color: var(--text-c);
+}
+
+.logo span {
+    color: var(--main-c);
+
+}
+
+.main-nav {
+    display: flex;
+
+}
+
+.main-nav a {
+    color: var(--text-c);
+    font-weight: 500;
+    font-size: var(--text-size-md);
+    padding: var(--XS-gap) var(--S-gap);
+    transition: all 0.3s ease-in-out;
+}
+
+.main-nav a:hover {
+    color: var(--main-c);
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav a {
+    color: var(--text-c);
+    margin-right: var(--XS-gap);
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1rem;
+}
+
+
+.right-nav a:first-child {
+    color: var(--text-c);
+    padding-right: var(--S-gap);
+}
+
+.right-nav a:hover {
+    color: var(--main-c);
+    transform: translateY(-5px);
+}
+
+.menu {
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+section {
+    padding: 200px 5% 2% 120px;
+
+}
+
+section h2 {
+    font-size: var(--text-size-2xl);
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url(/images/Gemini.png);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h2 {
+    letter-spacing: var(--XXS-gap);
+    text-transform: uppercase;
+    color: var(--main-c);
+}
+
+.home-text h1 {
+    font-size: var(--text-size-5xl);
+}
+
+.home-text p {
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--contrast-text);
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid var(--main-c);
+    border-radius: 10px;
+    background-color: var(--main-c);
+    color: var(--bg-c);
+    font-size: var(--text-size-md);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateX(20px);
+    background-color: transparent;
+    color: var(--text-c);
+
+}
+
+.second-section {
+    padding-inline: 80px;
+}
+
+.grid-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    place-items: center;
+}
+
+.img-content {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+.img-content img {
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.img-content img:hover {
+    transform: scale(1.1);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.row h4 {
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.row h4:hover {
+    color: var(--main-c);
+    text-shadow: 0px 0px 10px #ffecd8c0;
+}
+
+.holiday {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.holiday-text p {
+    line-height: var(--L-gap);
+}
+
+.holiday-text h5 {
+    color: var(--main-c);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: var(--text-size-lg);
+}
+
+.holiday-text h2 {
+    font-size: var(--text-size-4xl);
+    margin-block: var(--S-gap);
+}
+
+.holiday-text p {
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--contrast-text);
+}
+
+.holiday-text span {
+    color: var(--main-c);
+}
+
+.center-text h4 {
+    text-align: center;
+    font-size: var(--text-size-3xl);
+    margin-block-end: 20px;
+}
+
+.tour-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.box img {
+    width: 100%;
+    filter: brightness(90%);
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.box h4 {
+
+    position: absolute;
+    bottom: 110px;
+    left: 50px;
+    font-size: var(--text-size-lg);
+    font-weight: 700;
+}
+
+.box h6 {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    font-size: var(--text-size-md);
+    font-weight: 300;
+}
+
+.box img:hover {
+    transform: scale(1.05);
+    filter: brightness(70%);
+}
+
+.center-btn {
+    margin-block-start: 20px;
+    text-align: center;
+
+}
+
+.tour .btn:hover {
+    transform: translateY(10px);
+}
+
+.culture {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    gap: 50px;
+}
+
+.newsletter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    gap: 15px;
+    width: 450px;
+    height: 50px;
+    justify-content: center;
+}
+
+.newsletter-text h2 {
+    font-size: var(--text-size-4xl);
+    margin-bottom: var(--S-gap);
+}
+
+.newsletter-text p {
+    font-weight: 300;
+    color: var(--contrast-text);
+}
+
+.newsletter form .email-input {
+    color: var(--contrast-text);
+    background-color: #212121;
+    border: 0;
+    padding: var(--XXS-gap);
+    border-radius: 10px;
+}
+
+.newsletter form .btn:hover {
+    transform: translate(0);
+}
+
+.footer-container {
+    padding-inline: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.footer-container a {
+    text-decoration: none;
+
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-box a {
+    font-weight: 100;
+    color: var(--contrast-text);
+    margin-block: 3px;
+}
+
+.footer-box .main-head {
+    font-weight: 700;
+    margin-block-end: 6px;
+    color: var(--text-c);
+}
+
+.footer-box a:hover {
+    color: #fff;
+}
+
+
+
+.footer-container .social {
+    font-size: 19px;
+
+}
+
+.ri {
+    color: var(--contrast-text);
+    cursor: pointer;
+}
+
+.ri:hover {
+    color: var(--main-c);
+}
+
+.ri {
+    margin-inline: 3px;
+}
+
+.copyright {
+    padding-block: 15px;
+}
+
+.copyright p {
+    text-align: center;
+    color: var(--contrast-text);
+    font-weight: 100;
+    font-size: var(--XS-gap);
+}
