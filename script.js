@@ -5,7 +5,7 @@ let menu = document.querySelector('.menu');
 let cancel = document.querySelector('.cancel');
 let slide = document.querySelector('.main-nav');
 let scrollBar = document.querySelector('body');
-
+head.classList.add("stick");
 menu.onclick = () => {
     scrollBar.classList.add('no-overflow');
     menu.classList.add('menu-disappear');
